@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>X-Horizon</title>
-    <link rel="stylesheet" href="weather.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.min.css">
-    <link rel="icon" type="favicon" href="images.ico">
-    <script src="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="assets/css/weather.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <script src="assets/vendor/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body class="bg-dark ">
     <nav class="navbar navbar-expand-lg bg-body-dark text-body-light  dre">
@@ -50,25 +50,25 @@
     <div class="card">
         <div class="search">
             <input type="text" placeholder="enter city name" spellcheck="false">
-            <button><img src="weather-app-img/images/search.png"></button>
+            <button><img src="assets/images/weather/search.png"></button>
         </div>
         <div class="error">
             <p>Invalid city name</p>
         </div>
         <div class="weather">
-            <img src="weather-app-img/images/rain.png" class="weather-icon">
+            <img src="assets/images/weather/rain.png" class="weather-icon">
             <h1 class="temp">22°C</h1>
             <h2 class="city">New York</h2>
             <div class="details">
                 <div class="col">
-                    <img src="weather-app-img/images/humidity.png">
+                    <img src="assets/images/weather/humidity.png">
                     <div>
                         <p class="humidity">50%</p>
                         <p>Humidity</p>
                     </div>
                 </div>
                 <div class="col">
-                    <img src="weather-app-img/images/wind.png">
+                    <img src="assets/images/weather/wind.png">
                     <div>
                         <p class="wind">15 km/h</p>
                         <p>Wind Speed</p>
@@ -135,22 +135,22 @@ document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
 document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
 
 if(data.weather[0].main == "Clouds"){
-    weatherIcon.src = "weather-app-img/images/clouds.png";
+    weatherIcon.src = "assets/images/weather/clouds.png";
 }
 else if(data.weather[0].main == "Clear"){
-    weatherIcon.src = "weather-app-img/images/clear.png";
+    weatherIcon.src = "assets/images/weather/clear.png";
 }
 else if(data.weather[0].main == "Rain"){
-    weatherIcon.src = "weather-app-img/images/rain.png";
+    weatherIcon.src = "assets/images/weather/rain.png";
 }
 else if(data.weather[0].main == "Drizzle"){
-    weatherIcon.src = "weather-app-img/images/drizzle.png";
+    weatherIcon.src = "assets/images/weather/drizzle.png";
 }
 else if(data.weather[0].main == "Mist"){
-    weatherIcon.src = "weather-app-img/images/mist.png";
+    weatherIcon.src = "assets/images/weather/mist.png";
 }
 else if(data.weather[0].main == "Snow"){
-    weatherIcon.src = "weather-app-img/images/snow.png";
+    weatherIcon.src = "assets/images/weather/snow.png";
 }
 
 document.querySelector(".weather").style.display = "block"
